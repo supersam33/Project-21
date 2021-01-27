@@ -19,23 +19,7 @@ function setup() {
 function draw() {
   background("black");
   
-  if(wall.x-bullet.x < (bullet.width+wall.width)/2) {
-    bullet.velocityX = 0;
 
-    var deoformation = 0.5 * weight * speed * speed/22509;
-
-    if(deformation>180) {
-      bullet.shapeColor = "white";
-    }
-
-    if(deformation<180 && deformation>100) {
-      bullet.shapeColor = "white";
-    }
-
-    if(deformation<100) {
-      bullet.shapeColor = "white";
-    }
-  }
 
   if(hasCollided(bullet, wall)) {
     bullet.velocityX = 0;
